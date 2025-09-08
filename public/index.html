@@ -10,9 +10,30 @@
     <h1>Push-up Counter</h1>
     <p>Position the camera so that your whole body is visible during the exercise.</p>
     <div class="container">
+        <div id="camera-selection">
+            <label for="camera-select">Choose a camera:</label>
+            <select id="camera-select"></select>
+        </div>
         <video id="video" width="640" height="480" autoplay playsinline></video>
         <canvas id="canvas" width="640" height="480"></canvas>
         <div id="counter">Push-ups: 0</div>
+    </div>
+    <div class="controls">
+        <button id="export-button">Export History</button>
+        <button id="clear-button">Clear History</button>
+    </div>
+    <div id="history-container">
+        <h2>History</h2>
+        <table id="history-table">
+            <thead>
+                <tr>
+                    <th>Repetition</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
     <script src="index.js" type="module"></script>
 </body>
